@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pptx-to-quarto"
+version = "0.1.0"
+description = "Convert PowerPoint slides into editable Quarto Reveal.js presentations"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "AGPL-3.0-only"
+dependencies = ["pptx2md==2.0.6", "python-pptx>=1,<2", "PyMuPDF>=1.25,<2", "PyYAML>=6,<7"]
+
+[project.scripts]
+pptx-to-quarto = "pptx_to_quarto:main"
+
+[project.urls]
+Repository = "https://github.com/StatskontoretDatalabb/pptx-to-quarto"
+
+[tool.setuptools]
+py-modules = ["pptx_to_quarto", "pdf_layout"]
